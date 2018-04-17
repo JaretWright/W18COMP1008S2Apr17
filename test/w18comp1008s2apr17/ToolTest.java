@@ -100,13 +100,9 @@ public class ToolTest
     @Test
     public void testGetPrice()
     {
-        System.out.println("getPrice");
-        Tool validTool = null;
-        double expResult = 0.0;
+        double expResult = 29.99;
         double result = validTool.getPrice();
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(expResult, result,0.0);
     }
 
     /**
@@ -115,12 +111,54 @@ public class ToolTest
     @Test
     public void testSetPrice()
     {
-        System.out.println("setPrice");
-        double price = 0.0;
-        Tool validTool = null;
-        validTool.setPrice(price);
+        validTool.setPrice(10.00);
+        assertEquals(10.00, validTool.getPrice(), 0.0);
+    }
+    
+    /**
+     * Test of setPrice method, of class Tool.
+     */
+    @Test
+    public void testSetPriceInvalidLow()
+    {
+        try{
+            validTool.setPrice(-1);
+            fail("a price of $-1 should trigger an exception");
+        }
+        catch(IllegalArgumentException e)
+        {
+            System.out.printf("Invalid low price: %s%n", e.getMessage());
+        }
+    }
+    
+    /**
+     * Test of setPrice method, of class Tool.
+     */
+    @Test
+    public void testSetPriceInvalidHigh()
+    {
+        try{
+            validTool.setPrice(201);
+            fail("a price of $201 should trigger an exception");
+        }
+        catch(IllegalArgumentException e)
+        {
+            System.out.printf("Invalid low price: %s%n", e.getMessage());
+        }
+    }
+
+    /**
+     * Test of getDescription method, of class Tool.
+     */
+    @Test
+    public void testGetDescription()
+    {
+        System.out.println("getDescription");
+        Tool instance = null;
+        String expResult = "";
+        String result = instance.getDescription();
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-    
 }

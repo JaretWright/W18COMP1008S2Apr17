@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Tool.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;W18COMP1008S2Apr17&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">w18comp1008s2apr17</a> &gt; <span class="el_source">Tool.java</span></div><h1>Tool.java</h1><pre class="source lang-java linenums">package w18comp1008s2apr17;
+
+/**
+ *
+ * @author JWright
+ */
+public class Tool
+{
+    private String name, brand;
+    private double price;
+
+    public Tool(String name, String brand, double price)
+<span class="fc" id="L13">    {</span>
+<span class="fc" id="L14">        setName(name);</span>
+<span class="fc" id="L15">        setBrand(brand);</span>
+<span class="fc" id="L16">        setPrice(price);</span>
+<span class="fc" id="L17">    }</span>
+
+    public String getName()
+    {
+<span class="fc" id="L21">        return name;</span>
+    }
+
+    public void setName(String name)
+    {
+<span class="fc" id="L26">        this.name = name;</span>
+<span class="fc" id="L27">    }</span>
+
+    public String getBrand()
+    {
+<span class="nc" id="L31">        return brand;</span>
+    }
+
+    public void setBrand(String brand)
+    {
+<span class="fc" id="L36">        this.brand = brand;</span>
+<span class="fc" id="L37">    }</span>
+
+    public double getPrice()
+    {
+<span class="fc" id="L41">        return price;</span>
+    }
+
+    public void setPrice(double price)
+    {
+<span class="fc bfc" id="L46" title="All 4 branches covered.">        if (price &gt;= 0 &amp;&amp; price &lt;= 200)</span>
+<span class="fc" id="L47">            this.price = price;</span>
+        else
+<span class="fc" id="L49">            throw new IllegalArgumentException(&quot;Price must be in the range 0-200&quot;);</span>
+<span class="fc" id="L50">    }</span>
+    
+    
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

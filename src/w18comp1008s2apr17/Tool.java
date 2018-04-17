@@ -49,6 +49,11 @@ public class Tool
             throw new IllegalArgumentException("Price must be in the range 0-200");
     }
     
+    public String getDescription()
+    {
+        return "something to bang nails with";
+    }
+    
     
     
 }
